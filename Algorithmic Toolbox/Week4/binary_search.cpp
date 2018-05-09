@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include <cassert>
 #include <vector>
 #include <cmath>
@@ -6,7 +7,7 @@
 using std::vector;
 
 int binary_search(const vector<int> &a, int x) {
-    int left = 0, right = (int) a.size();
+    int left = 0, right = (int) a.size() - 1;
     //write your code here
     while (left <= right) {
         int mid = left + (right - left) / 2;
@@ -45,6 +46,7 @@ void TestSolution() {
         // random select an element to search
         int randomIndex = rand() % 100000;
         std::cout << "Search Number : " << randomIndex << '\n';
+        std::sort(a.begin(), a.end());
         //function that easy to compute ("Brute Force Solution")
         long long res1 = linear_search(a, randomIndex);
         //function that you try to test its correctness
