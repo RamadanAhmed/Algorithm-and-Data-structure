@@ -27,11 +27,11 @@ int get_majority_element(vector<int> &a, int left, int right) {
 }
 
 int main() {
-    int n;
+    unsigned int n;
     std::cin >> n;
     vector<int> a(n);
-    for (size_t i = 0; i < a.size(); ++i) {
-        std::cin >> a[i];
+    for (int &i : a) {
+        std::cin >> i;
     }
-    std::cout << (get_majority_element(a, 0, a.size()) != -1) << '\n';
+    std::cout << (get_majority_element(a, 0, static_cast<int>(a.size())) != -1) << '\n';
 }
