@@ -1,7 +1,6 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.10)
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin/Week3)
-set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pipe -O2 -std=c++14")
+set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Change "change.cpp")
 add_executable(CoveringSegment "covering_segments.cpp")
