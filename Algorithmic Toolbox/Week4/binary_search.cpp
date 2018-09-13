@@ -4,6 +4,7 @@
 #include <vector>
 #include <cmath>
 #include <cstdlib>
+
 using std::vector;
 
 int binary_search(const vector<int> &a, int x) {
@@ -59,6 +60,7 @@ void TestSolution() {
         }
     }
 }
+
 int main() {
     unsigned int n;
     std::cin >> n;

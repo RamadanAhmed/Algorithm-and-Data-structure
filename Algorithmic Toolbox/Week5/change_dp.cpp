@@ -41,7 +41,7 @@ int main() {
     vector<int> g_Denominations = {1, 3, 4};
     int m;
     std::cin >> m;
-    vector<int> g_MinNumCoins(m + 1,INT_MAX);
+    vector<int> g_MinNumCoins(m + 1, INT_MAX);
     std::cout << get_change(m, g_MinNumCoins, g_Denominations) << '\n';
     // TestSolution();
 }

@@ -6,11 +6,11 @@ using std::vector;
 using std::cin;
 using std::cout;
 
-long long BruteForceSol(const vector<int>& numbers) {
+long long BruteForceSol(const vector<int> &numbers) {
     return 0;
 }
 
-long long EfficientSol(const vector<int>& numbers) {
+long long EfficientSol(const vector<int> &numbers) {
     return 0;
 }
 
@@ -36,8 +36,7 @@ int main() {
         if (res1 != res2) {
             cout << "Wrong answer: " << res1 << ' ' << res2 << "\n";
             break;
-        }
-        else {
+        } else {
             cout << "OK\n";
         }
     }

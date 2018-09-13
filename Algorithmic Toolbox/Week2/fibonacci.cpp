@@ -28,7 +28,7 @@ long long fibonacci_fast(int n) {
     long long result = 0;
     if (n <= 1)
         return n;
-    for (int i = 2; i <= n; i++){
+    for (int i = 2; i <= n; i++) {
         result = prev_prev_sum + prev_sum;
         prev_prev_sum = prev_sum;
         prev_sum = result;
