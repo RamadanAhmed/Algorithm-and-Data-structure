@@ -2,6 +2,6 @@ cmake_minimum_required(VERSION 3.10)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Change knapsack.cpp)
-add_executable(PrimitiveCalculator partition3.cpp)
-add_executable(EditDistance placing_parentheses.cpp)
+add_executable(knapsack knapsack.cpp)
+add_executable(partition3 partition3.cpp)
+add_executable(placing_parentheses placing_parentheses.cpp)

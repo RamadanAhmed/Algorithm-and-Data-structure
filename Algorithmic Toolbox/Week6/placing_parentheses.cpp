@@ -25,22 +25,22 @@ std::pair<long long, long long>
 MinMax(long long i, long long j, const vector<char> &op, const vector<vector<long long>> &M, const vector<vector<long long>> &m) {
     long long mmax =LONG_LONG_MIN;
     long long mmin =LONG_LONG_MAX;
-    for (long long k = i; k < j - 1; k++){
+    for (long long k = i; k < j; k++){
         long long a = eval(M[i][k],M[k+1][j],op[k]);
         long long b = eval(M[i][k],m[k+1][j],op[k]);
         long long c = eval(m[i][k],M[k+1][j],op[k]);
         long long d = eval(m[i][k],m[k+1][j],op[k]);
-        mmax = std::max(std::max(a,b),std::max(c,d));
-        mmin = std::min(std::min(a,b),std::min(c,d));
+        mmax = std::max(mmax,std::max(std::max(a,b),std::max(c,d)));
+        mmin = std::min(mmin,std::min(std::min(a,b),std::min(c,d)));
     }
-    return std::make_pair(mmax,mmin);
+    return std::make_pair(mmin,mmax);
 }
 
 long long get_maximum_value(const string &exp) {
     std::vector<char> op;
     std::vector<int> digit;
     for (int i = 0; i < exp.size(); i++) {
-        if (i % 2 == 0)
+        if (i % 2 == 1)
             op.emplace_back(exp[i]);
         else
             digit.emplace_back(exp[i] - '0');
