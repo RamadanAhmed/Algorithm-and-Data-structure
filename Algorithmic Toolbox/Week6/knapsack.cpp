@@ -17,9 +17,9 @@ int optimal_weight(int W, const vector<int> &w) {
 
 int optimal_weight_dp(int W, const vector<int> &w) {
     std::vector<int> init(W + 1, 0);
-    std::vector<std::vector<int>> values(w.size(), init);
+    std::vector<std::vector<int>> values(w.size() + 1, init);
     for (int i = 1; i < W + 1; i++) {
-        for (int j = 1; j < w.size(); j++) {
+        for (int j = 1; j < w.size() + 1; j++) {
             values[j][i] = values[j - 1][i];
             if (w[j - 1] <= i) {
                 int candidate = w[j - 1] + values[j - 1][i - w[j - 1]];
