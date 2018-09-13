@@ -6,9 +6,9 @@
 using std::string;
 
 int min_3_number(int x, int y, int z) {
-    if (x < y && x < z)
+    if (x <= y && x <= z)
         return x;
-    else if (y < z && y < x)
+    else if (y <= z && y <= x)
         return y;
     else
         return z;
@@ -44,13 +44,13 @@ int edit_distance(const string &str1, const string &str2) {
 void TestSolution() {
     assert(edit_distance("ab", "ab") == 0);
     assert(edit_distance("short", "ports") == 3);
-    assert(edit_distance("editing", "distance") == 5);
+    assert(edit_distance("ramadan", "z") == 7);
 }
 
 int main() {
     string str1;
     string str2;
-//    TestSolution();
+    //TestSolution();
     std::cin >> str1 >> str2;
     std::cout << edit_distance(str1, str2) << std::endl;
     return 0;
